@@ -1,13 +1,24 @@
 
 import { Link } from "react-router-dom";
-import { ShoppingCart, Menu } from "lucide-react";
+import { ShoppingCart, Menu, LogOut } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store/cartStore";
+import { useAuth } from "@/hooks/useAuth";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const cartItemCount = useCartStore(state => state.getCartItemCount());
+  const { user, signOut } = useAuth();
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
@@ -37,6 +48,20 @@ const Header = () => {
               )}
             </Button>
           </Link>
+          {user ? (
+            <div className="flex items-center gap-4">
+              <Avatar>
+                <AvatarFallback>{user.email?.charAt(0).toUpperCase()}</AvatarFallback>
+              </Avatar>
+              <Button variant="ghost" size="icon" onClick={handleSignOut}>
+                <LogOut className="h-5 w-5" />
+              </Button>
+            </div>
+          ) : (
+            <Link to="/auth">
+              <Button>Sign In</Button>
+            </Link>
+          )}
         </nav>
 
         {/* Mobile menu button */}
@@ -82,6 +107,20 @@ const Header = () => {
             >
               Offers
             </Link>
+            {user ? (
+              <Button variant="ghost" onClick={handleSignOut} className="justify-start">
+                <LogOut className="h-5 w-5 mr-2" />
+                Sign Out
+              </Button>
+            ) : (
+              <Link
+                to="/auth"
+                className="font-medium py-2 hover:text-brand-orange transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Sign In
+              </Link>
+            )}
           </nav>
         </div>
       )}
