@@ -38,7 +38,7 @@ export const restaurants: Restaurant[] = [
         name: "Paneer Kathi Roll",
         description: "Soft roomali roti wrapped with marinated paneer and fresh vegetables",
         price: 120,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f",
         category: "Vegetarian Rolls",
         popular: true,
         vegetarian: true
@@ -48,7 +48,7 @@ export const restaurants: Restaurant[] = [
         name: "Chicken Kathi Roll",
         description: "Soft roomali roti wrapped with tender chicken pieces and fresh vegetables",
         price: 140,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0",
         category: "Non-Vegetarian Rolls",
         popular: true
       },
@@ -57,7 +57,7 @@ export const restaurants: Restaurant[] = [
         name: "Egg Kathi Roll",
         description: "Soft roomali roti wrapped with flavorful eggs and fresh vegetables",
         price: 110,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1539252554453-80ab65ce3586",
         category: "Egg Rolls"
       },
       {
@@ -65,7 +65,7 @@ export const restaurants: Restaurant[] = [
         name: "Veg Kathi Roll",
         description: "Soft roomali roti wrapped with mixed vegetables and special masala",
         price: 100,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1533630018502-93a1f194f3ca",
         category: "Vegetarian Rolls",
         vegetarian: true
       }
@@ -86,7 +86,7 @@ export const restaurants: Restaurant[] = [
         name: "Masala Dosa",
         description: "Crispy rice crepe filled with spiced potato filling",
         price: 90,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1630383249896-424dd8bf061b",
         category: "Dosa",
         popular: true,
         vegetarian: true
@@ -96,7 +96,7 @@ export const restaurants: Restaurant[] = [
         name: "Idli Sambar",
         description: "Soft steamed rice cakes served with sambar and chutney",
         price: 80,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1637502096640-7c41f3089296",
         category: "Breakfast",
         vegetarian: true
       },
@@ -105,7 +105,7 @@ export const restaurants: Restaurant[] = [
         name: "Vada",
         description: "Crispy savory fried snack made from lentil batter",
         price: 60,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1630383249899-968bb721daf2",
         category: "Breakfast",
         vegetarian: true
       },
@@ -114,7 +114,7 @@ export const restaurants: Restaurant[] = [
         name: "Chettinad Chicken",
         description: "Spicy chicken dish with aromatic spices from Chettinad region",
         price: 180,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
         category: "Main Course",
         popular: true
       }
@@ -135,7 +135,7 @@ export const restaurants: Restaurant[] = [
         name: "Classic Maggi",
         description: "The original instant noodles with classic masala flavor",
         price: 50,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841",
         category: "Regular Maggi",
         popular: true,
         vegetarian: true
@@ -145,7 +145,7 @@ export const restaurants: Restaurant[] = [
         name: "Cheese Maggi",
         description: "Instant noodles topped with melted cheese",
         price: 70,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1645696301019-35a64573a36e",
         category: "Special Maggi",
         vegetarian: true
       },
@@ -154,7 +154,7 @@ export const restaurants: Restaurant[] = [
         name: "Masala Maggi",
         description: "Spicy instant noodles with extra masala and vegetables",
         price: 65,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1634864572872-ace76f06bef8",
         category: "Special Maggi",
         vegetarian: true
       },
@@ -163,7 +163,7 @@ export const restaurants: Restaurant[] = [
         name: "Chicken Maggi",
         description: "Instant noodles with chicken pieces and special seasoning",
         price: 85,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b",
         category: "Non-Veg Maggi",
         popular: true
       }
@@ -184,7 +184,7 @@ export const restaurants: Restaurant[] = [
         name: "Margherita Pizza",
         description: "Classic pizza with cheese, tomato sauce and basil",
         price: 199,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca",
         category: "Classic Pizzas",
         popular: true,
         vegetarian: true
@@ -194,7 +194,7 @@ export const restaurants: Restaurant[] = [
         name: "Pepperoni Pizza",
         description: "Pizza topped with cheese and pepperoni slices",
         price: 299,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1628840042765-356cda07504e",
         category: "Non-Veg Pizzas",
         popular: true
       },
@@ -203,7 +203,7 @@ export const restaurants: Restaurant[] = [
         name: "Farmhouse Pizza",
         description: "Pizza topped with onion, capsicum, mushroom and corn",
         price: 249,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1571066811602-716837d681de",
         category: "Veg Pizzas",
         vegetarian: true
       },
@@ -212,7 +212,7 @@ export const restaurants: Restaurant[] = [
         name: "Garlic Breadsticks",
         description: "Freshly baked breadsticks with garlic and herb seasoning",
         price: 129,
-        image: "/placeholder.svg",
+        image: "https://images.unsplash.com/photo-1619531040576-f9416740661f",
         category: "Sides",
         vegetarian: true
       }
