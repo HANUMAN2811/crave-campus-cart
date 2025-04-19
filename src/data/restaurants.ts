@@ -1,4 +1,3 @@
-
 export interface MenuItem {
   id: string;
   name: string;
@@ -38,7 +37,7 @@ export const restaurants: Restaurant[] = [
         name: "Paneer Kathi Roll",
         description: "Soft roomali roti wrapped with marinated paneer and fresh vegetables",
         price: 120,
-        image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f",
+        image: "https://images.unsplash.com/photo-1631898139078-ad4e39216ccc",
         category: "Vegetarian Rolls",
         popular: true,
         vegetarian: true
@@ -48,7 +47,7 @@ export const restaurants: Restaurant[] = [
         name: "Chicken Kathi Roll",
         description: "Soft roomali roti wrapped with tender chicken pieces and fresh vegetables",
         price: 140,
-        image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0",
+        image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f",
         category: "Non-Vegetarian Rolls",
         popular: true
       },
@@ -65,7 +64,7 @@ export const restaurants: Restaurant[] = [
         name: "Veg Kathi Roll",
         description: "Soft roomali roti wrapped with mixed vegetables and special masala",
         price: 100,
-        image: "https://images.unsplash.com/photo-1533630018502-93a1f194f3ca",
+        image: "https://images.unsplash.com/photo-1627662168902-f5fd5fc3e7a0",
         category: "Vegetarian Rolls",
         vegetarian: true
       }
@@ -86,7 +85,7 @@ export const restaurants: Restaurant[] = [
         name: "Masala Dosa",
         description: "Crispy rice crepe filled with spiced potato filling",
         price: 90,
-        image: "https://images.unsplash.com/photo-1630383249896-424dd8bf061b",
+        image: "https://images.unsplash.com/photo-1601050690597-a848a1e72d4c",
         category: "Dosa",
         popular: true,
         vegetarian: true
@@ -96,7 +95,7 @@ export const restaurants: Restaurant[] = [
         name: "Idli Sambar",
         description: "Soft steamed rice cakes served with sambar and chutney",
         price: 80,
-        image: "https://images.unsplash.com/photo-1637502096640-7c41f3089296",
+        image: "https://images.unsplash.com/photo-1668238070686-c6455d990188",
         category: "Breakfast",
         vegetarian: true
       },
@@ -105,7 +104,7 @@ export const restaurants: Restaurant[] = [
         name: "Vada",
         description: "Crispy savory fried snack made from lentil batter",
         price: 60,
-        image: "https://images.unsplash.com/photo-1630383249899-968bb721daf2",
+        image: "https://images.unsplash.com/photo-1588166524941-3bf61a9ea9d7",
         category: "Breakfast",
         vegetarian: true
       },
@@ -114,7 +113,7 @@ export const restaurants: Restaurant[] = [
         name: "Chettinad Chicken",
         description: "Spicy chicken dish with aromatic spices from Chettinad region",
         price: 180,
-        image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+        image: "https://images.unsplash.com/photo-1617196034796-73dfa7b593fb",
         category: "Main Course",
         popular: true
       }
@@ -135,7 +134,7 @@ export const restaurants: Restaurant[] = [
         name: "Classic Maggi",
         description: "The original instant noodles with classic masala flavor",
         price: 50,
-        image: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841",
+        image: "https://images.unsplash.com/photo-1617093727343-025c5c9b8a49",
         category: "Regular Maggi",
         popular: true,
         vegetarian: true
@@ -145,7 +144,7 @@ export const restaurants: Restaurant[] = [
         name: "Cheese Maggi",
         description: "Instant noodles topped with melted cheese",
         price: 70,
-        image: "https://images.unsplash.com/photo-1645696301019-35a64573a36e",
+        image: "https://images.unsplash.com/photo-1647445247276-8b9274e6c33e",
         category: "Special Maggi",
         vegetarian: true
       },
@@ -184,7 +183,7 @@ export const restaurants: Restaurant[] = [
         name: "Margherita Pizza",
         description: "Classic pizza with cheese, tomato sauce and basil",
         price: 199,
-        image: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca",
+        image: "https://images.unsplash.com/photo-1648808597959-5d39fc4d6d70",
         category: "Classic Pizzas",
         popular: true,
         vegetarian: true
@@ -203,7 +202,7 @@ export const restaurants: Restaurant[] = [
         name: "Farmhouse Pizza",
         description: "Pizza topped with onion, capsicum, mushroom and corn",
         price: 249,
-        image: "https://images.unsplash.com/photo-1571066811602-716837d681de",
+        image: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca",
         category: "Veg Pizzas",
         vegetarian: true
       },
