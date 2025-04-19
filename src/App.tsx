@@ -11,27 +11,30 @@ import RestaurantPage from "./pages/RestaurantPage";
 import CartPage from "./pages/CartPage";
 import AuthPage from "./pages/AuthPage";
 import NotFound from "./pages/NotFound";
+import { useState } from "react";
 
-const queryClient = new QueryClient();
+const App = () => {
+  const [queryClient] = useState(() => new QueryClient());
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <AuthProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<MainLayout><HomePage /></MainLayout>} />
-            <Route path="/restaurant/:id" element={<MainLayout><RestaurantPage /></MainLayout>} />
-            <Route path="/cart" element={<MainLayout><CartPage /></MainLayout>} />
-            <Route path="/auth" element={<MainLayout><AuthPage /></MainLayout>} />
-            <Route path="*" element={<MainLayout><NotFound /></MainLayout>} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </AuthProvider>
-  </QueryClientProvider>
-);
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<MainLayout><HomePage /></MainLayout>} />
+              <Route path="/restaurant/:id" element={<MainLayout><RestaurantPage /></MainLayout>} />
+              <Route path="/cart" element={<MainLayout><CartPage /></MainLayout>} />
+              <Route path="/auth" element={<MainLayout><AuthPage /></MainLayout>} />
+              <Route path="*" element={<MainLayout><NotFound /></MainLayout>} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </AuthProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
