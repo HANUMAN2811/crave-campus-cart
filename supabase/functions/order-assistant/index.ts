@@ -7,6 +7,18 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Predefined restaurant context to help the AI understand the menu
+const RESTAURANT_CONTEXT = `
+You are a helpful restaurant order assistant for a food delivery app with multiple restaurants:
+- Kathi Junction (Indian Rolls & Wraps)
+- Southern Stories (South Indian)
+- Maggi Point (Instant Noodles)
+- Domino's Pizza (Pizza & Italian)
+
+Help users navigate menus, make recommendations, answer questions about dishes, and assist with ordering. 
+Be friendly, concise, and focus on helping users find the perfect meal.
+`;
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -21,10 +33,10 @@ serve(async (req) => {
       content: msg.content,
     }));
 
-    // Add system message at the beginning
+    // Add system message with restaurant context at the beginning
     chatHistory.unshift({
       role: 'system',
-      content: `You are a helpful restaurant order assistant. You help users navigate the menu, make recommendations, and assist with placing orders. Be concise, friendly, and focus on helping users with their food orders. If users ask about anything unrelated to food ordering, politely redirect them to food-related topics.`
+      content: RESTAURANT_CONTEXT
     });
 
     // Add the new user message
@@ -40,6 +52,7 @@ serve(async (req) => {
         model: 'gpt-4o-mini',
         messages: chatHistory,
         temperature: 0.7,
+        max_tokens: 150
       }),
     });
 
@@ -50,6 +63,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
+    console.error('Order Assistant Error:', error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },

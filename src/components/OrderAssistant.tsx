@@ -13,7 +13,13 @@ interface Message {
 }
 
 const OrderAssistant = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    // Add a welcome message
+    { 
+      role: 'assistant', 
+      content: "Hi there! 👋 I'm your AI Order Assistant. Need help finding the perfect meal or navigating our restaurant menus? Ask me anything!" 
+    }
+  ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -51,7 +57,7 @@ const OrderAssistant = () => {
       <div className="p-4 border-b bg-muted">
         <h2 className="font-semibold flex items-center gap-2">
           <Bot className="h-5 w-5" />
-          Order Assistant
+          AI Order Assistant
         </h2>
       </div>
 
@@ -98,7 +104,7 @@ const OrderAssistant = () => {
       <div className="p-4 border-t">
         <div className="flex gap-2">
           <Textarea
-            placeholder="Ask about the menu or help with your order..."
+            placeholder="Ask about menus, get recommendations, or place an order..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
