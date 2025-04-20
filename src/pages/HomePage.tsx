@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { restaurants } from "@/data/restaurants";
 import RestaurantCard from "@/components/RestaurantCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { ImageGenerator } from "@/components/ImageGenerator";
 
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -60,6 +60,11 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Image Generator Section */}
+      <div className="mb-12">
+        <ImageGenerator />
       </div>
 
       {/* Restaurants section with grid animations */}
