@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { getRestaurantById } from "@/data/restaurants";
 import MenuItem from "@/components/MenuItem";
@@ -7,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Clock, Star, MapPin, ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import OrderAssistant from "@/components/OrderAssistant";
 
 const RestaurantPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -99,28 +99,36 @@ const RestaurantPage = () => {
         </div>
         
         {/* Category Filter */}
-        <div className="mb-6 overflow-x-auto">
-          <div className="flex space-x-2 py-2">
-            {categories.map(category => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                className={`whitespace-nowrap ${
-                  selectedCategory === category ? "bg-brand-orange" : ""
-                }`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </Button>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="md:col-span-2">
+            <div className="mb-6 overflow-x-auto">
+              <div className="flex space-x-2 py-2">
+                {categories.map(category => (
+                  <Button
+                    key={category}
+                    variant={selectedCategory === category ? "default" : "outline"}
+                    className={`whitespace-nowrap ${
+                      selectedCategory === category ? "bg-brand-orange" : ""
+                    }`}
+                    onClick={() => setSelectedCategory(category)}
+                  >
+                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                  </Button>
+                ))}
+              </div>
+            </div>
+            
+            {/* Menu Items */}
+            <div className="space-y-4 mb-8">
+              {menuItems.map(item => (
+                <MenuItem key={item.id} item={item} restaurantId={restaurant.id} />
+              ))}
+            </div>
           </div>
-        </div>
-        
-        {/* Menu Items */}
-        <div className="space-y-4 mb-8">
-          {menuItems.map(item => (
-            <MenuItem key={item.id} item={item} restaurantId={restaurant.id} />
-          ))}
+          
+          <div className="hidden md:block">
+            <OrderAssistant />
+          </div>
         </div>
       </div>
     </div>
